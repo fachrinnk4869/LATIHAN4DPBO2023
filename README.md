@@ -1,10 +1,10 @@
 ## Janji
-Saya Fachri Najm Noer Kartiman NIM 2106515 mengerjakan soal Latihan 3
+Saya Fachri Najm Noer Kartiman NIM 2106515 mengerjakan soal Latihan 4
 dalam mata kuliah Desain Pemrograman Berorientasi Objek untuk keberkahanNya
 maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan.
 Aamiin.
 
-# Tugas LATIHAN2DPBO2023
+# Tugas LATIHAN4DPBO2023
 Buatlah program berbasis OOP menggunakan bahasa pemrograman C++ dan Python  yang mengimplementasikan konsep inheritance, composition, dan array of object pada kelas-kelas tersebut:
 Mahasiswa: NIM, nama, jenis_kelamin, fakultas, prodi
 Human: NIK, nama, jenis_kelamin
