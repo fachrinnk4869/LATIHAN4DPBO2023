@@ -1,17 +1,21 @@
 from SivitasAkademik import SivitasAkademik
+from ProgramStudi import ProgramStudi
+from Course import Course
 
 class Mahasiswa (SivitasAkademik):
   __nim = ''# atribut NIM
-  __prodi = ''# atribut prodi
+  __prodi = ProgramStudi()# atribut prodi
   __fakultas = ''# atribut fakultas
+  __course = []# atribut fakultas
 
 
-  def init(self, nik = '', nama = '', gender = '', asalUniv = '', emailEdu = '', nim = '', prodi = '', fakultas = ''):
+  def __init__(self, nik = '', nama = '', gender = '', nim = '', fakultas = '', prodi = ProgramStudi(), asalUniv = '', emailEdu = '', course = Course()):
     # inisiasi dengan value awal
     super().__init__(nik, nama, gender, asalUniv, emailEdu)
     self.__nim = nim
     self.__prodi = prodi
     self.__fakultas = fakultas
+    self.__course.append(course)
   
 
   def getNim(self):
@@ -26,6 +30,10 @@ class Mahasiswa (SivitasAkademik):
     #return fakultas
     return self.__fakultas
   
+  def getCourse(self):
+    #return course
+    return self.__course
+  
   def setNim(self, nim):
     # menggati value NIM
     self.__nim = nim
@@ -37,4 +45,7 @@ class Mahasiswa (SivitasAkademik):
   def setFakultas(self, fakultas):
     # mengganti value fakultas
     self.__fakultas = fakultas
+    
+  def addCourse(self, course):
+    self.__course.append(course)
   

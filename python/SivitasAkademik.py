@@ -5,7 +5,7 @@ class SivitasAkademik(Human):
     __emailEdu = ''# atribut Email edu
 
 
-    def __init__(self, emailEdu = '', asalUniv= '', nik = '', nama = '', jenisKelamin = ''):
+    def __init__(self, nik = '', nama = '', jenisKelamin = '', asalUniv= '', emailEdu = ''):
       # inisias dengan value awal
       super().__init__(nik, nama, jenisKelamin)
       self.__asalUniv = asalUniv

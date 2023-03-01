@@ -1,43 +1,35 @@
+# create instances of Course
+from Course import Course
+from ProgramStudi import ProgramStudi
+from SivitasAkademik import SivitasAkademik
 from Mahasiswa import Mahasiswa
-from Crud import Crud 
+from Dosen import Dosen
 
-arr = Crud()
-print("masukkan perintah: ")# masukkan perintah awal
+course1 = Course("Mathematics")
+course2 = Course("Computer Science")
 
-sign = str(input())
-while(sign != "exit"):# sampai mendapatkan input exit maka terus melooping
-  if(sign == "tampil"):
-    # menampilkan data mahasiswa lengkap
-    arr.tampil()
-  
-  elif(sign == "tambah"):
-    # menambah data ke list
-    mhs = Mahasiswa()
-    val = str(input())
-    mhs.setNik(val)
+# create instances of ProgramStudi and add courses to them
+prodi1 = ProgramStudi("Information Technology", "IF", course2)
+# prodi1.addCourse(course2)
 
-    val = str(input())
-    mhs.setNim(val)
+prodi2 = ProgramStudi("Mathematics", "MA", course1)
+# prodi2.addCourse(course1)
 
-    val = str(input())
-    mhs.setNama(val)
+# create instances of SivitasAkademik
+sivitas_akademik1 = SivitasAkademik("00001", "John Doe", "Male", "Harvard University", "johndoe@harvard.edu")
+sivitas_akademik2 = SivitasAkademik("00002", "Jane Doe", "Female", "Stanford University", "janedoe@stanford.edu")
 
-    val = str(input())
-    mhs.setJenisKelamin(val)
+# create instances of Mahasiswa and Dosen
+mahasiswa1 = Mahasiswa("00003", "John Smith", "Male", "11111", "Faculty of Information Technology", prodi1, "Harvard University", "johnsmith@harvard.edu", course2)
+dosen1 = Dosen("00004", "Jane Smith", "Female", "22222", "Faculty of Mathematics", prodi2, "PhD in Mathematics", "Algebra", "Stanford University", "janesmith@stanford.edu")
 
-    val = str(input())
-    mhs.setAsalUniv(val)
+# print out the information of the created objects
+print(f"Nama Mahasiswa: {mahasiswa1.getNama()}")
+print(f"Program Studi: {mahasiswa1.getProdi().getNamaProdi()} ({mahasiswa1.getProdi().getKode()})")
+print(f"Email Sivitas Akademik: {sivitas_akademik1.getEmailEdu()}")
+print(f"Nama Matakuliah: {mahasiswa1.getCourse()[0].getNamaMatkul()}")
+print()
 
-    val = str(input())
-    mhs.setEmailEdu(val)
-
-    val = str(input())
-    mhs.setProdi(val)
-
-    val = str(input())
-    mhs.setFakultas(val)
-
-    arr.tambah(mhs)# menambahkan data ke list yang sudah ada
-  
-  print("masukkan perintah: ")
-  sign = str(input()) # masukkan perintah berikutnya
+print(f"Nama Dosen: {dosen1.getNama()}")
+print(f"Keahlian: {dosen1.getKeahlian()}")
+print(f"Nama Program Studi: {dosen1.getProdi().getNamaProdi()}")

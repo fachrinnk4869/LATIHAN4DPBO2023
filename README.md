@@ -1,14 +1,17 @@
 ## Janji
-Saya Fachri Najm Noer Kartiman NIM 2106515 mengerjakan soal Latihan 2
+Saya Fachri Najm Noer Kartiman NIM 2106515 mengerjakan soal Latihan 3
 dalam mata kuliah Desain Pemrograman Berorientasi Objek untuk keberkahanNya
 maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan.
 Aamiin.
 
 # Tugas LATIHAN2DPBO2023
-Buatlah program berbasis OOP menggunakan bahasa pemrograman C++, Java, Python, dan PHP yang mengimplementasikan konsep Multi-level Inheritance  pada kelas - kelas tersebut:
+Buatlah program berbasis OOP menggunakan bahasa pemrograman C++ dan Python  yang mengimplementasikan konsep inheritance, composition, dan array of object pada kelas-kelas tersebut:
 Mahasiswa: NIM, nama, jenis_kelamin, fakultas, prodi
 Human: NIK, nama, jenis_kelamin
 SivitasAkademik: asal_universitas, email_edu
+Dosen: NIP, nama, jenis_kelamin, fakultas, prodi, pend_terakhir, keahlian
+Course: nama_matakuliah, 
+Program Studi: nama_prodi, kode, course
 
 File README berisi desain program, penjelasan alur, dan dokumentasi saat program dijalankan (screenshot/screen record, pilih salah satu bahasa sebagai contoh)
 
@@ -24,16 +27,24 @@ Desain yang saya buat menggunakan 4 Class:
 `Class Human` memiliki total tiga atribut:
 * **NIK** -> NIK manusia, `string`
 * **Nama** -> nama manusia, `string`
-* **Nama** -> jenis kelamin manusia, `string`
+* **jenisKelamin** -> jenis kelamin manusia, `string`
 
 `Class SivitasAkademik` memiliki total dua atribut dan atribut dari parentnya `Class Human`:
 * **asalUniv** -> asal Universitas sivitas akademik, `string`
 * **emailEdu** -> email Edu sivitas akademik, `string`
 
-`Class Mahasiswa` memiliki total tiga atribut dan atribut dari parentnya `Class SivitasAkademik`:
+`Class Mahasiswa` memiliki total empat atribut dan atribut dari parentnya `Class SivitasAkademik`:
 * **NIM** -> NIM mahasiswa, `string`
 * **Prodi** -> program studi mahasiswa, `string`
 * **Fakultas** -> Fakultas mahasiswa, `string`
+* **Course** -> object Course, `Course`
+
+`Class Dosen` memiliki total empat atribut dan atribut dari parentnya `Class SivitasAkademik`:
+* **NIP** -> NIP mahasiswa, `string`
+* **Prodi** -> program studi mahasiswa, `string`
+* **Fakultas** -> Fakultas mahasiswa, `string`
+* **PendidikanTrakhir** -> object PendTrakhir, `PendTrakhir`
+* **Keahlian** -> object keahlian, `keahlian`
 
 _Semua Class diatas dilengkapi dengan setter dan getternya_
 
@@ -81,21 +92,10 @@ Pengguna dapat memilih untuk mengetikkan serangkaian perintah berikut pada comma
 Seteleh memilih maka akan dimintai mengetikkan perintah berikutnya sampai mengetik perintah `exit`
 
 ## Dokumentasi
-**Program Java**
+**Program Python**
 
-![Java program](java/java-program.png)
-
-**Program PHP**
-
-![PHP program](php/php-program.png)
+![Java program](python/python-program.png)
 
 **UML Program**
 
-![PHP program](uml-lat2.png)
-
-### Test Case
-tambah 12345 2106515 fachri L UPI fachri.edu ilkom FPMIPA
-
-tambah 1234 23451 Najm L PIU najm.edu biologi FPTK
-
-tampil
+![PHP program](UML.png)
