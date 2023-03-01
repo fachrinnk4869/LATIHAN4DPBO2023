@@ -22,7 +22,9 @@ Desain yang saya buat menggunakan 4 Class:
 * Human
 * Sivitas Akademik
 * Mahasiswa
-* Crud
+* Dosen
+* ProgramStudi
+* Course
 
 `Class Human` memiliki total tiga atribut:
 * **NIK** -> NIK manusia, `string`
@@ -33,13 +35,20 @@ Desain yang saya buat menggunakan 4 Class:
 * **asalUniv** -> asal Universitas sivitas akademik, `string`
 * **emailEdu** -> email Edu sivitas akademik, `string`
 
-`Class Mahasiswa` memiliki total empat atribut dan atribut dari parentnya `Class SivitasAkademik`:
+`Class Mahasiswa` memiliki total empat atribut dan atribut dari parentnya `Class SivitasAkademik` dan meng composite `Class ProgramStudi` dan `Class Course`:
 * **NIM** -> NIM mahasiswa, `string`
 * **Prodi** -> program studi mahasiswa, `string`
 * **Fakultas** -> Fakultas mahasiswa, `string`
 * **Course** -> object Course, `Course`
 
 `Class Dosen` memiliki total empat atribut dan atribut dari parentnya `Class SivitasAkademik`:
+* **NIP** -> NIP mahasiswa, `string`
+* **Prodi** -> program studi mahasiswa, `string`
+* **Fakultas** -> Fakultas mahasiswa, `string`
+* **PendidikanTrakhir** -> object PendTrakhir, `PendTrakhir`
+* **Keahlian** -> object keahlian, `keahlian`
+
+`Class ProgramStudi`:
 * **NIP** -> NIP mahasiswa, `string`
 * **Prodi** -> program studi mahasiswa, `string`
 * **Fakultas** -> Fakultas mahasiswa, `string`
@@ -73,23 +82,7 @@ Pada `Class Crud` terdapat dua list yaitu `list` dan `listNim`
 `Kenapa?` itu dibuat agar library yang ada digunakan dengan semestinya seperti library find pada bahasa c++ dipakai untuk mengecek apakah disuatu data terdapat data NIM yang redundant atau tidak jadi bisa dicek di `listNIM`
 
 ## Alur Program
-**semua program mempunyai alur yang sama, kecuali PHP karena inputan secara hardcore dari codenya**
-
-Pengguna akan diminta untuk mengetikkan perintah pada command prompt
-
-Pengguna dapat memilih untuk mengetikkan serangkaian perintah berikut pada command prompt
-
-- ketik `tambah [NIK] [NIM] [Nama] [Jenis Kelamin] [Asal Universitas] [Email Edu] [Prodi] [Fakultas]` untuk menambah data pada list
-
-<!-- - ketik `ganti [NIM] [Nama] [Prodi] [Fakultas]` untuk mengganti data pada list -->
-
-<!-- - ketik `hapus [NIM]` untuk menghapus data pada list -->
-
-- ketik `tampil` untuk menampilkan data pada list
-
-- ketik `exit` untuk keluar dari looping
-
-Seteleh memilih maka akan dimintai mengetikkan perintah berikutnya sampai mengetik perintah `exit`
+Program ini harcore jadi tidak memerlukan inpuntan sendiri
 
 ## Dokumentasi
 **Program Python**
