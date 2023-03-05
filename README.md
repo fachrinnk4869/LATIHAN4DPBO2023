@@ -55,13 +55,17 @@ Desain yang saya buat menggunakan 4 Class:
 * **PendidikanTrakhir** -> object PendTrakhir, `PendTrakhir`
 * **Keahlian** -> object keahlian, `keahlian`
 
+`Class Course`:
+* **NamaMatkul** -> Nama Mata Kuliah, `string`
+
 _Semua Class diatas dilengkapi dengan setter dan getternya_
 
+## Penjelasan UML
 **UML**
 
 ![UML](UML.png)
 
-berdasarkan gambar diatas Human sebagai parent dari sivitas akademik karena sivitasAkdemik merupakan human, 
+Berdasarkan gambar diatas Human sebagai parent dari sivitas akademik karena sivitasAkdemik merupakan human, 
 dosen dan mahasiswa merupakan sivitasAkademik,
 
 Mahasiswa dan dosen meng composite Program studi karena mereka memiliki program studinya masing
