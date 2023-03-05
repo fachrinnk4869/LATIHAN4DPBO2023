@@ -58,29 +58,6 @@ Desain yang saya buat menggunakan 4 Class:
 _Semua Class diatas dilengkapi dengan setter dan getternya_
 
 
-Pada Class class diatas dilakukan multi-level inheritance dari 
-
-`Class Human` -> `Class SivitasAkademik` -> `Class Mahasiswa`
-
-`Kenapa?` karena `Mahasiswa` adalah `SivitasAkademik` dan `SivitasAkademik` adalah `Human`
-
-maka pewarisan dilakukan dari `Class Human` ke `Class SivitasAkademik` ke `Class Mahasiswa`
-
-
-`Class Crud` memiliki total dua atribut:
-* **list** -> array untuk menyimpan class Mahasiswa, `array of Mahasiswa`
-* **listNim** -> array untuk menyimpan NIM, `array of integer`
-
-dan `Class Crud` memiliki total empat method:
-* **tambah** -> menambah data Mahasiswa ke `list` dan NIM nya ke `listNim`
-* **tampil** -> menampilkan data Mahasiswa dari `list`
-<!-- * **hapus** -> menghapus data Mahasiswa ke `list` dan NIM nya ke `listNim`
-* **ganti** -> mengganti data Mahasiswa ke `list` dan NIM nya ke `listNim` -->
-
-Pada `Class Crud` terdapat dua list yaitu `list` dan `listNim`
-
-`Kenapa?` itu dibuat agar library yang ada digunakan dengan semestinya seperti library find pada bahasa c++ dipakai untuk mengecek apakah disuatu data terdapat data NIM yang redundant atau tidak jadi bisa dicek di `listNIM`
-
 ## Alur Program
 Program ini harcore jadi tidak memerlukan inpuntan sendiri
 
@@ -89,6 +66,6 @@ Program ini harcore jadi tidak memerlukan inpuntan sendiri
 
 ![Java program](python/python-program.png)
 
-**UML Program**
+**UML**
 
-![PHP program](UML.png)
+![UML](UML.png)
