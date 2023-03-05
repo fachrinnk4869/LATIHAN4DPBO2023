@@ -57,15 +57,23 @@ Desain yang saya buat menggunakan 4 Class:
 
 _Semua Class diatas dilengkapi dengan setter dan getternya_
 
+**UML**
+
+![UML](UML.png)
+
+berdasarkan gambar diatas Human sebagai parent dari sivitas akademik karena sivitasAkdemik merupakan human, 
+dosen dan mahasiswa merupakan sivitasAkademik,
+
+Mahasiswa dan dosen meng composite Program studi karena mereka memiliki program studinya masing
+
+ProgramStudi meng composite Course karena program Studi memiliki Course/MataKuliahnya sendiri
+
+Mahasiswa meng compostite Course karena mahasiswa bisa memilih Course diluar program studinya mahasiswa
 
 ## Alur Program
-Program ini harcore jadi tidak memerlukan inpuntan sendiri
+Program ini harcore jadi memerlukan inpuntan sendiri
 
 ## Dokumentasi
 **Program Python**
 
 ![Java program](python/python-program.png)
-
-**UML**
-
-![UML](UML.png)
